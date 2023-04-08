@@ -6,7 +6,7 @@
         <classes>
             <class name="test_cases.class_one">
                 <methods>
-                    <include name="add"/>
+                    <include name="open_site"/>
                     <include name="mul"/>
                     <include name="factorial"/>
                     <include name="sub"/>
