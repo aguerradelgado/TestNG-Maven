@@ -3,6 +3,7 @@ package test_cases;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -12,13 +13,9 @@ public class class_one {
     @Test
     void open_site()
     {
-        System.setProperty("web-driver.chrome.driver", "C:\\SELENIUM\\Drivers\\chromedriver.exe");
+        System.setProperty("webdriver.edge.driver", "C:\\Users\\alexp\\Downloads\\edgedriver_win64\\msedgedriver.exe");
+        driver = new EdgeDriver();
 
-        // bypass local only setting - allow other sites
-        ChromeOptions option = new ChromeOptions();
-        option.addArguments("--remote-allow-origins=*");
-
-        driver = new ChromeDriver(option);
         driver.get("https://en.wikipedia.org/wiki/Wiki/");
         driver.manage().window().maximize();
     }
