@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="C:/Users/aleg1/IdeaProjects/testNG_Maven_trial/src/test/java/test_cases(failed)">
+    <classes>
+      <class name="test_cases.class_one">
+        <methods>
+          <include name="factorial"/>
+        </methods>
+      </class> <!-- test_cases.class_one -->
+    </classes>
+  </test> <!-- C:/Users/aleg1/IdeaProjects/testNG_Maven_trial/src/test/java/test_cases(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->
