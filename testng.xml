@@ -6,17 +6,17 @@
         <classes>
             <class name="test_cases.login_01">
                 <methods>
-                    <include name="add"/>
-                    <include name="mul"/>
-                    <include name="factorial"/>
-                    <include name="sub"/>
+                    <include name="open_login_page"/>
+                    <include name="valid_user_pass"/>
+                    <include name="screenshot_profile"/>
                 </methods>
             </class>
-            <class name="test_cases.class_two">
+            <class name="test_cases.history_02">
                 <methods>
-                    <include name="Method1"/>
-                    <include name="Method2"/>
-                    <include name="Method3"/>
+                    <include name="search_article"/>
+                    <include name="contents_tab"/>
+                    <include name="view_history"/>
+                    <include name="filter_revs"/>
                 </methods>
             </class>
         </classes>
