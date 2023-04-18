@@ -19,6 +19,21 @@
                     <include name="filter_revs"/>
                 </methods>
             </class>
+            <class name="test_cases.random_article_03">
+            <methods>
+                <include name="nav_2_random_article"/>
+                <include name="link_num"/>
+                <include name="link_nav"/>
+                <include name="title_tag"/>
+            </methods>
+            </class>
+            <class name="test_cases.commons_04">
+                <methods>
+                    <include name="nav_2_commons"/>
+                    <include name="picture_n_screenshot"/>
+                    <include name="twitter_link"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>
