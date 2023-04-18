@@ -3,6 +3,8 @@ package test_cases;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.Assert;
@@ -16,13 +18,14 @@ public class random_article_03 {
     private WebDriver driver;
     @BeforeClass
     public void open_site() {
-        System.setProperty("webdriver.gecko.driver", "C:\\Users\\alexp\\Downloads\\geckodriver-v0.33.0-win32\\geckodriver.exe");
-        FirefoxOptions option = new FirefoxOptions();
-        option.setBinary("C:\\Program Files\\Mozilla Firefox\\firefox.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\SELENIUM\\Drivers\\chromedriver.exe");
 
+        // bypass local only setting - allow other sites
+        ChromeOptions option = new ChromeOptions();
+        option.addArguments("--remote-allow-origins=*");
 
-        driver = new FirefoxDriver(option);
-        driver.get("https://www.wikipedia.org/wiki/Main_Page");
+        driver = new ChromeDriver(option);
+        driver.get("https://en.wikipedia.org/wiki/Main_Page");
         driver.manage().window().maximize();
     }
     @AfterClass

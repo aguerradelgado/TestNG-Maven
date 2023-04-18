@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.io.FileHandler;
@@ -19,13 +21,14 @@ public class commons_04 {
     private WebDriver driver;
     @BeforeClass
     public void open_site() {
-        System.setProperty("webdriver.gecko.driver", "C:\\Users\\alexp\\Downloads\\geckodriver-v0.33.0-win32\\geckodriver.exe");
-        FirefoxOptions option = new FirefoxOptions();
-        option.setBinary("C:\\Program Files\\Mozilla Firefox\\firefox.exe");
+        System.setProperty("webdriver.chrome.driver", "C:\\SELENIUM\\Drivers\\chromedriver.exe");
 
+        // bypass local only setting - allow other sites
+        ChromeOptions option = new ChromeOptions();
+        option.addArguments("--remote-allow-origins=*");
 
-        driver = new FirefoxDriver(option);
-        driver.get("https://www.wikipedia.org/wiki/Main_Page");
+        driver = new ChromeDriver(option);
+        driver.get("https://en.wikipedia.org/wiki/Main_Page");
         driver.manage().window().maximize();
     }
     @AfterClass
@@ -57,7 +60,7 @@ public class commons_04 {
 
         TakesScreenshot screenshot = (TakesScreenshot) driver;
         File src = screenshot.getScreenshotAs(OutputType.FILE);
-        File des = new File("C:\\Users\\alexp\\Pictures\\screenshot_potd.png");
+        File des = new File("C:\\Users\\aleg1\\OneDrive\\Desktop\\profile_testng_screenshots\\screenshot_potd.png");
         FileHandler.copy(src, des);
 
         driver.findElement(By.xpath("/html/body/div[6]/div/div[1]/button[1]")).click();

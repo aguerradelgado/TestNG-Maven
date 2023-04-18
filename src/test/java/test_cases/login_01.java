@@ -40,6 +40,9 @@ public class login_01 {
         Thread.sleep(2000); // wait for 2 seconds
         driver.findElement(By.id("pt-login-2")).click();
 
+        Assert.assertEquals(driver.getCurrentUrl(),
+                "https://en.wikipedia.org/w/index.php?title=Special:UserLogin&returnto=Main+Page");
+
     } // end open login page
 
     @Test(priority = 2)
@@ -65,7 +68,7 @@ public class login_01 {
     void screenshot_profile() throws IOException {
         TakesScreenshot screenshot = (TakesScreenshot) driver;
         File src = screenshot.getScreenshotAs(OutputType.FILE);
-        File des = new File("C:\\Users\\aleg1\\OneDrive\\Desktop\\profile_testng_screenshots\\screenshot.png");
+        File des = new File("C:\\Users\\aleg1\\OneDrive\\Desktop\\profile_testng_screenshots\\profile_screenshot.png");
         FileHandler.copy(src, des);
     } // end of screenshot
 

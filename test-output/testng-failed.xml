@@ -3,11 +3,13 @@
 <suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="C:/Users/aleg1/IdeaProjects/testNG_Maven_trial/src/test/java/test_cases(failed)">
     <classes>
-      <class name="test_cases.login_01">
+      <class name="test_cases.random_article_03">
         <methods>
-          <include name="factorial"/>
+          <include name="title_tag"/>
+          <include name="tearDown"/>
+          <include name="open_site"/>
         </methods>
-      </class> <!-- test_cases.login_01 -->
+      </class> <!-- test_cases.random_article_03 -->
     </classes>
   </test> <!-- C:/Users/aleg1/IdeaProjects/testNG_Maven_trial/src/test/java/test_cases(failed) -->
 </suite> <!-- Failed suite [All Test Suite] -->
